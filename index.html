@@ -1,4 +1,5 @@
 
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -126,6 +127,10 @@
             text-align: center;
         }
 
+        #image {
+            transition: opacity 1s ease-in-out; /* Transition effect: 0.5 seconds with ease-in-out timing */
+        }
+
     </style>
 </head>
 
@@ -217,8 +222,28 @@
     </script>
 
     <div class="hide-on-small-only">
-        <img src="img/1.jpg" style="width: 100%; object-fit: cover;">
+        <img id="image" src="img/1.jpg" style="width: 100%; object-fit: cover;">
     </div>
+
+    <script>
+        var images = ["img/2.jpg", "img/1.jpg",]; // Array of image paths
+        var currentIndex = 0; // Current index of the displayed image
+
+        function changeImage() {
+            var imageElement = document.getElementById("image");
+            imageElement.style.opacity = 0; // Set opacity to 0 for fade-out effect
+
+            setTimeout(function() {
+                imageElement.src = images[currentIndex]; // Set the source to the current image path
+                imageElement.style.opacity = 1; // Set opacity to 1 for fade-in effect
+                currentIndex = (currentIndex + 1) % images.length; // Move to the next image index in a loop
+            }, 1000); // Delay of 500 milliseconds (0.5 seconds) before changing the image
+
+            setTimeout(changeImage, 5000); // Call the function again after a delay of 4000 milliseconds (4 seconds)
+        }
+
+        setTimeout(changeImage, 5000); // Initial call to start the loop after 4 seconds
+    </script>
 
     <div class="slider hide-on-med-and-up" style="margin-top:-75px;">
         <ul class="slides" style="transform: scale(0.7);">
@@ -234,12 +259,24 @@
             <li>
                 <img src="img/1.4.jpg">
             </li>
+            <li>
+                <img src="img/2.1.jpg">
+            </li>
+            <li>
+                <img src="img/2.2.jpg">
+            </li>
+            <li>
+                <img src="img/2.3.jpg">
+            </li>
+            <li>
+                <img src="img/2.4.jpg">
+            </li>
         </ul>
     </div>
 
     <h5 class="center hide-on-small-only"style="font-family: Varela Round; margin-top:25px;"> Shop the latest collection now !</h5>
 
-    <p class="center hide-on-med and up"style="font-family: Varela Round; margin-top:-95px; font-size:16.5px;"> Shop the latest collection now !</p>
+    <p class="center hide-on-med-and-up"style="font-family: Varela Round; margin-top:-95px; font-size:16.5px;"> Shop the latest collection now !</p>
 
 
 
@@ -309,7 +346,7 @@
             indicators: false,
             height: 700,
             transition:500,
-            interval: 4000,
+            interval: 5000,
             });
         });
     </script>
