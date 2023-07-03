@@ -216,10 +216,18 @@
     </div>
 
     <div class="fixed-action-btn hide-on-med-and-up">
-        <a href="https://wa.me/919619638767" class="btn-floating btn-large green">
+        <a href="https://wa.me/send?phone=919619638767&#038;text=" class="btn-floating btn-large green">
           <i class="fab fa-whatsapp"></i>
         </a>
     </div>
+    
+    <script>
+        function sendMessage() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://api.whatsapp.com/send?phone=919619638767&text=Hi");
+        xhr.send();
+        }
+    </script>
  
     <script>
         $(document).ready(function(){
