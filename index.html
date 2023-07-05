@@ -131,6 +131,34 @@
             transition: opacity 1s ease-in-out; /* Transition effect: 0.5 seconds with ease-in-out timing */
         }
 
+        .carousel-item {
+            position: relative;
+        }
+    
+        .carousel-caption {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            background-color: rgba(9, 42, 108, 0.6);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .icon-container a {
+            margin: 0 10px; /* Adjust the margin as per your preference */
+            color: #000; /* Set the icon color */
+            font-size: 24px; /* Adjust the icon size */
+        }
+          
+
+
     </style>
 </head>
 
@@ -187,48 +215,38 @@
         </ul>   
     </nav>
 
-    <nav class="transparent hide-on-med-and-up" style="height:75px;">
+    <nav class="transparent hide-on-med-and-up" style="height: 75px;">
         <div class="container">
-            <a href="index.html" class="brand-logo center font responsive-img hide-on-med-and-up">
-                <img style="width: 115px; margin-top:5px; margin-left: 20px;" src="img/logo.jpg">
+            <a href="index.html" class="brand-logo center responsive-img hide-on-med-and-up">
+                <img style="width: 115px; margin-top: 5px; margin-left: 20px;" src="img/logo.jpg">
             </a>
             <a href="" class="sidenav-trigger" data-target="mobile-menu">
-                <i class="material-icons indigo-text text-darken-4" style="font-size:30px; margin-left: -17px;">menu
-                </i>
+                <i class="material-icons indigo-text text-darken-4" style="font-size: 30px; text-align: left;">menu</i>
             </a>
-                <ul class="sidenav grey lighten-2" id="mobile-menu">
-                    <li><a href="index.html" style="font-family: Varela Round; font-size: large; margin-top:15px;">Home</a></li>
-                    <li><a href="about.html" style="font-family: Varela Round; font-size: large;">Shop</a></li>
-                    <li><a href="about.html" style="font-family: Varela Round; font-size: large;">About Us</a></li>
-                    <li><a href="contact.html" style="font-family: Varela Round; font-size: large;">Contact Us</a></li>
-                    <li><a href="contact.html" style="font-family: Varela Round; font-size: large;">Book Appointment</a></li>
-                    <li><a href="contact.html" style="font-family: Varela Round; font-size: large;">Payment Details</a></li>
-                    <li><a href="contact.html" style="font-family: Varela Round; font-size: large;">Measurement Guidet</a></li>
-                    <li><a href="contact.html" style="font-family: Varela Round; font-size: large;">Terms and Conditions</a></li>
-                </ul>
+            <ul class="sidenav grey lighten-2" id="mobile-menu">
+                <li><a href="index.html" style="font-family: Varela Round; font-size: large; margin-top: 15px;">Home</a></li>
+                <li><a href="about.html" style="font-family: Varela Round; font-size: large;">Shop</a></li>
+                <li><a href="about.html" style="font-family: Varela Round; font-size: large;">About Us</a></li>
+                <li><a href="contact.html" style="font-family: Varela Round; font-size: large;">Contact Us</a></li>
+                <li><a href="contact.html" style="font-family: Varela Round; font-size: large;">Book Appointment</a></li>
+                <li><a href="contact.html" style="font-family: Varela Round; font-size: large;">Payment Details</a></li>
+                <li><a href="contact.html" style="font-family: Varela Round; font-size: large;">Measurement Guide</a></li>
+                <li><a href="contact.html" style="font-family: Varela Round; font-size: large;">Terms and Conditions</a></li>
+            </ul>
         </div>
     </nav>
 
     <div class="fixed-action-btn hide-on-small-only">
-        <a href="https://web.whatsapp.com/send?phone=919619638767&#038;text=" class="btn-floating btn-large green">
+        <a href="https://web.whatsapp.com/send?phone=919619638767&#038;text=Hello" class="btn-floating btn-large green">
           <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
     <div class="fixed-action-btn hide-on-med-and-up">
-        <a href="https://wa.me/919619638767/?text=H%20e%20y" class="btn-floating btn-large green">
+        <a href="https://wa.me/919619638767/?text=Hello%20" class="btn-floating btn-large green">
           <i class="fab fa-whatsapp"></i>
-        Whatsapp Me
         </a>
     </div>
-    
-    <script>
-        function sendMessage() {
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://api.whatsapp.com/send?phone=919619638767&text=Hi");
-        xhr.send();
-        }
-    </script>
  
     <script>
         $(document).ready(function(){
@@ -260,54 +278,56 @@
         setTimeout(changeImage, 5000); // Initial call to start the loop after 4 seconds
     </script>
 
-    <div class="slider hide-on-med-and-up" style="margin-top:-75px;">
-        <ul class="slides" style="transform: scale(0.7);">
-            <li>
+    <div class="slider hide-on-med-and-up">
+        <ul class="slides" style="transform: scale(0.7); background:#fff">
+            <li style="margin-top:-90px; background:#fff">
                 <img src="img/1.1.jpg">
             </li>
-            <li>
+            <li style="margin-top:-90px;">
                 <img src="img/1.2.jpg">
             </li>
-            <li>
-                <img src="img/1.3.jpg">
+            <li style="margin-top:-90px;">
+                <img src="img/1.3.jpg"> 
             </li>
-            <li>
-                <img src="img/1.4.jpg">
+            <li style="margin-top:-90px;">
+                <img src="img/1.4.jpg"> 
             </li>
-            <li>
+            <li style="margin-top:-90px;">
                 <img src="img/2.1.jpg">
             </li>
-            <li>
+            <li style="margin-top:-90px;">
                 <img src="img/2.2.jpg">
             </li>
-            <li>
+            <li style="margin-top:-90px;">
                 <img src="img/2.3.jpg">
             </li>
-            <li>
+            <li style="margin-top:-90px;">
                 <img src="img/2.4.jpg">
             </li>
-            <li>
+            <li style="margin-top:-90px;">
                 <img src="img/3.1.jpg">
             </li>
-            <li>
+            <li style="margin-top:-90px;">
                 <img src="img/3.2.jpg">
             </li>
-            <li>
+            <li style="margin-top:-90px;">
                 <img src="img/3.3.jpg">
             </li>
-            <li>
+            <li style="margin-top:-90px;">
                 <img src="img/3.4.jpg">
             </li>
         </ul>
     </div>
 
-    <h5 class="center hide-on-small-only" style="font-family: Varela Round; margin-top:25px;"> Shop the latest collection now !</h5>
+    <h5 class="center hide-on-small-only" style="font-family: Varela Round; margin-top:25px; color:rgba(9, 42, 108, 0.83);"> Shop the latest collection now !</h5>
 
-    <p class="center hide-on-med-and-up" style="font-family: Varela Round; margin-top:-95px; font-size:16.5px;"> Shop the latest collection now !</p>
+    <p class="center hide-on-med-and-up" style="font-family: Varela Round; margin-top:-145px; font-size:16.5px; color:rgba(9, 42, 108, 0.83);position: relative; z-index: 999;">
+        Shop the latest collection now !
+    </p>
 
     <BR>
 
-    <p class="center hide-on-med-and-up" style="font-family: Varela Round; font-size:20px;"> Select from a wide range of options</p>
+    <p class="center hide-on-med-and-up" style="font-family: Varela Round; font-size:20px; color:rgba(9, 42, 108, 0.83);"> Select from a wide range of options</p>
     
     <BR class="hide-on-small-only"><BR class="hide-on-small-only">
 
@@ -472,13 +492,192 @@
     </div>
 
 
-    <BR><BR>
+    <BR><BR class="hide-on-small-only">
+
+        <!-- <div class="row hide-on-small-only">
+            <div class="col s12 m6 l2" style="margin-left:55px;">
+              <div class="card">
+                <div class="card-image">
+                    <img src="img/2.1.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Card Title</span>
+                    <p>This is a sample card.</p>
+                  </div>
+                  <div class="card-action">
+                    <a class="waves-effect waves-light btn" href="#">Button</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l2 offset-l1">
+              <div class="card">
+                <div class="card-image">
+                    <img src="img/2.1.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Card Title</span>
+                    <p>This is a sample card.</p>
+                  </div>
+                  <div class="card-action">
+                    <a class="waves-effect waves-light btn" href="#">Button</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l2 offset-l1">
+              <div class="card">
+                <div class="card-image">
+                    <img src="img/2.1.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Card Title</span>
+                    <p>This is a sample card.</p>
+                  </div>
+                  <div class="card-action">
+                    <a class="waves-effect waves-light btn" href="#">Button</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l2 offset-l1">
+              <div class="card">
+                <div class="card-image">
+                    <img src="img/2.1.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Card Title</span>
+                    <p>This is a sample card.</p>
+                  </div>
+                  <div class="card-action">
+                    <a class="waves-effect waves-light btn" href="#">Button</a>
+                  </div>
+              </div>
+            </div>
+          </div> -->
+
+    <h5 class="center hide-on-small-only" style="font-family: Varela Round; color:rgba(9, 42, 108, 0.83);"> Top Selling Outfits</h5>
+    <p class="center hide-on-med-and-up" style="font-family: Varela Round; font-size:25px; color:rgba(9, 42, 108, 0.83);"> Top Selling Outfits</p>
+
+	<div class="row" style="margin-top: -75px;">
+        <div class="col s12 carousel">
+            <a href="index.html">
+                <div class="carousel-item">
+                    <img class="card-rounded hoverable" src="img/3.1.jpg">
+                    <div class="carousel-caption" style="font-family: Varela Round;">₹ 2599/-</div>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="carousel-item">
+                    <img class="card-rounded hoverable" src="img/2.1.jpg">
+                    <div class="carousel-caption" style="font-family: Varela Round;">₹ 2599/-</div>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="carousel-item">
+                    <img class="card-rounded hoverable" src="img/1.1.jpg">
+                    <div class="carousel-caption" style="font-family: Varela Round;">₹ 2599/-</div>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="carousel-item">
+                    <img class="card-rounded hoverable" src="img/1.2.jpg">
+                    <div class="carousel-caption" style="font-family: Varela Round;">₹ 2599/-</div>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="carousel-item">
+                    <img class="card-rounded hoverable" src="img/1.3.jpg">
+                    <div class="carousel-caption" style="font-family: Varela Round;">₹ 2599/-</div>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="carousel-item">
+                    <img class="card-rounded hoverable" src="img/2.1.jpg">
+                    <div class="carousel-caption" style="font-family: Varela Round;">₹ 2599/-</div>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="carousel-item">
+                    <img class="card-rounded hoverable" src="img/1.1.jpg">
+                    <div class="carousel-caption" style="font-family: Varela Round;">₹ 2599/-</div>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="carousel-item">
+                    <img class="card-rounded hoverable" src="img/1.4.jpg">
+                    <div class="carousel-caption" style="font-family: Varela Round;">₹ 2599/-</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <BR><BR class="hide-on-small-only">
+    <div class="container hide-on-small-only">
+        <h5 class="center scrollspy" style="font-family: Varela Round; color:rgba(9, 42, 108, 0.83);" id="about"> About Us</h5>
+        <BR>
+        <p style="font-family: Varela Round; text-align:justify">
+            Welcome to Preyasi, your one-stop shop for women's apparel! We take pride in offering a wide range of Indian and Western-wear clothing options for women. 
+            Whether you're looking for something traditional or contemporary, we have got you covered. </p>
+        <p style="font-family: Varela Round; text-align:justify">
+            At Preyasi, we understand the importance of variety, which is why our collections cater to different occasions and styles. 
+            From our exquisite wedding collection to trendy party wear, you'll find the perfect outfit to make a statement. 
+            For your everyday needs, we have a selection of comfortable and stylish day-to-day dresses that combine fashion with practicality. </p>
+        <p style="font-family: Varela Round; text-align:justify">
+            If you have a specific design in mind, our skilled team can stitch it to order, ensuring a personalized and unique garment that fits you perfectly. 
+            We also provide free alteration facilities, so you can make adjustments to any purchased item to achieve the ideal fit.
+            We ship orders worldwide.</p>
+        <p style="font-family: Varela Round; text-align:justify">
+            In addition to ready-to-wear clothing, we offer a range of dress materials, allowing you to unleash your creativity and design your own outfits. 
+            We believe in empowering our customers to express their individuality through fashion.
+            Visit Preyasi today and explore our diverse collection of Indian and Western-wear apparel for women.</p>        
+    </div>
+
+    <BR class="hide-on-med-and-up">
+    <p class="center hide-on-med-and-up" style="font-family: Varela Round; font-size:25px; color:rgba(9, 42, 108, 0.83);"> Find Us</p>
+
+    <div class="container hide-on-med-and-up center" style="width:325px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d666.4026082971379!2d72.84521723312169!3d19.11895239158251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d1a6fec093%3A0x78a0a22b1cfcd668!2sPreyasi!5e0!3m2!1sen!2sin!4v1688551597227!5m2!1sen!2sin" 
+        width="325" height="400" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <BR><BR><BR><BR>
+    </div>
+
+    <div class="container hide-on-med-and-up" style="width:325px;">
+        <h5 style="font-family: Varela Round;color:rgba(9, 42, 108, 0.83);">Contact</h5>
+        <p class="black-text" style="font-family: Varela Round;font-size:small; ">
+        <b>Shop Address </b> : 1/C Alankar Shopping Centre (NADCO), near Aditi Juice Centre, S.V. Road, Andheri (West), Mumbai - 400058</p>
+
+        <p class="black-text" style="font-family: Varela Round;font-size:small; ">
+        <b>Contact Number </b> : 022 2624 1003, 022 6695 2202</p>
+
+        <p class="black-text" style="font-family: Varela Round;font-size:small;">
+        <b>Email </b> : preyasishop@gmail.com</p>
+        
+        <BR>
+
+        <h5 style="font-family: Varela Round;color:rgba(9, 42, 108, 0.83); ">Connect</h5>
+        <BR>
+        <div class="icon-container">
+            <a href="https://www.instagram.com/preyasi.in/"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919619638767/?text=Hello%20"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:preyasishop@gmail.com?subject"><i class="fas fa-envelope"></i></a>
+        </div>
+        <BR>
+    
+    </div>
+    <footer class="page-footer white hide-on-med-and-up">
+        <div class="footer-copyright grey darken-4">
+            <div class="container center-align" style="font-family: Varela Round;">&copy; Preyasi - Women's Wear</div>
+        </div>
+    </footer>
+        
+           
+           
+        
+    
     <!-- footer -->
     <footer class="page-footer white hide-on-small-only">
-        <div class="container" style="width:880px">
+        <div class="container">
             <div class="row">
 
-                <div class="col s12 l5 scrollspy" id="contact">
+                <div class="col s12 l6 scrollspy" style="margin-left:-10px;" id="contact">
                     <h5 style="font-family: Varela Round;color:rgba(9, 42, 108, 0.83);">Contact</h5>
                     
                     <p class="black-text" style="font-family: Varela Round;font-size:small;">
@@ -491,7 +690,7 @@
                     <b>Email </b> : preyasishop@gmail.com</p>
                 </div>
 
-                <div class="col s12 l2 offset-l5 scrollspy">
+                <div class="col s12 l2 offset-l4 scrollspy">
                     <h5 style="font-family: Varela Round;color:rgba(9, 42, 108, 0.83);">Connect</h5>
                     <ul>
                         <li>
@@ -500,13 +699,13 @@
                                 &nbsp;&nbsp;Instagram</a>
                         </li>
                         <BR>
-                        <li>
+                        <li style="margin-top:-8px;">
                             <i class="fa fa-whatsapp black-text"></i>
-                                <a href="https://web.whatsapp.com/send?phone=919619638767&#038;text=" class="black-text" style="font-family: Varela Round;font-size:small;">
-                                &nbsp;&nbsp;&nbsp;Whatsapp</a>
+                                <a href="https://web.whatsapp.com/send?phone=919619638767&#038;text=Hello" class="black-text" style="font-family: Varela Round;font-size:small;">
+                                &nbsp;&nbsp;Whatsapp</a>
                         </li>
                         <BR>  
-                        <li>
+                        <li style="margin-top:-8px;">
                             <i class="fa fa-envelope black-text"></i>
                                 <a href=mailto:preyasishop@gmail.com?subject class="black-text" style="font-family: Varela Round;font-size:small;">
                                 &nbsp;&nbsp;Email</a>
@@ -517,8 +716,7 @@
             </div>
         </div>
         <div class="footer-copyright grey darken-4">
-            <div class="container center-align hide-on-med-and-down" style="font-family: Varela Round;">&copy; Preyasi - Women's Wear</div>
-            <div class="container center-align hide-on-med-and-up" style="font-family: Varela Round;">&copy; Preyasi - Women's Wear</div>
+            <div class="container center-align" style="font-family: Varela Round;">&copy; Preyasi - Women's Wear</div>
         </div>
     </footer> 
   
@@ -535,10 +733,16 @@
         $('.tooltipped').tooltip();
         $('.scrollspy').scrollSpy();
         $(".tabs-content").css('width','1000px');
+        $(".carousel").carousel({
+			dist: 0,
+			padding: 40,
+			indicators: true,
+			numVisible: 7   
+		}); 
         $('.slider').slider({
             indicators: false,
-            height: 700,
             transition:500,
+            height:700,
             interval: 5000,
             });
         });
